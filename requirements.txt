@@ -1,0 +1,86 @@
+# ==========================================================
+# Multi-Agent Drug Discovery Platform - Requirements
+# ==========================================================
+# 
+# INSTALLATION INSTRUCTIONS:
+# --------------------------
+# 1. Create a virtual environment:
+#    python -m venv venv
+#    
+# 2. Activate the virtual environment:
+#    Windows: venv\Scripts\activate
+#    Linux/Mac: source venv/bin/activate
+#
+# 3. Install PyTorch first (CPU version):
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#    
+#    Or for CUDA 11.8:
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#
+# 4. Install PyTorch Geometric:
+#    pip install torch-geometric torch-scatter torch-sparse torch-cluster -f https://data.pyg.org/whl/torch-2.0.0+cpu.html
+#    
+#    For CUDA, change +cpu to +cu118
+#
+# 5. Install remaining dependencies:
+#    pip install -r requirements.txt
+#
+# ==========================================================
+
+# Core ML/DL Framework
+# --------------------
+torch>=2.0.0,<3.0.0
+torchvision>=0.15.0
+
+# Graph Neural Networks (PyTorch Geometric)
+# -----------------------------------------
+# NOTE: Install these separately using the commands above
+torch-geometric>=2.3.0
+torch-scatter>=2.1.0
+torch-sparse>=0.6.17
+torch-cluster>=1.6.1
+
+# Chemistry / Molecular Processing
+# --------------------------------
+rdkit>=2023.03.1
+# If rdkit fails, try: pip install rdkit-pypi
+
+# Data Processing
+# ---------------
+numpy>=1.24.0,<2.0.0
+pandas>=2.0.0,<3.0.0
+scipy>=1.10.0,<2.0.0
+
+# Visualization
+# -------------
+matplotlib>=3.7.0,<4.0.0
+seaborn>=0.12.0,<1.0.0
+plotly>=5.14.0,<6.0.0
+
+# Machine Learning
+# ----------------
+scikit-learn>=1.2.0,<2.0.0
+xgboost>=1.7.0,<3.0.0
+
+# Model Persistence
+# -----------------
+joblib>=1.2.0,<2.0.0
+
+# Web Interface
+# -------------
+streamlit>=1.25.0,<2.0.0
+
+# Progress Bars
+# -------------
+tqdm>=4.65.0,<5.0.0
+
+# ==========================================================
+# QUICK SETUP SCRIPT (Windows PowerShell):
+# ==========================================================
+# python -m venv venv
+# .\venv\Scripts\Activate
+# pip install --upgrade pip
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# pip install torch-geometric torch-scatter torch-sparse torch-cluster -f https://data.pyg.org/whl/torch-2.0.0+cpu.html
+# pip install rdkit numpy pandas scipy matplotlib seaborn scikit-learn streamlit tqdm joblib plotly xgboost
+# ==========================================================
